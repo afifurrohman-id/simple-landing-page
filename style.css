@@ -1,0 +1,699 @@
+/* ! Setting smooth scrolling */
+:root {
+  --border-color: #858585;
+  --primary-color: rgb(31, 36, 59);
+  --box-shadows: 0px 2px 5px rgba(67, 67, 67, 0.5);
+  scroll-behavior: smooth;
+}
+/* ! Settings font all elements to sans-serif & Reset margin padding */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+/* ! Go to top button */
+.go-top {
+  cursor: pointer;
+  width: 3em;
+  height: 3em;
+  right: 2em;
+  bottom: 2em;
+  background-color: rgb(10, 90, 237);
+  position: fixed;
+  border: none;
+  display: none;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+.go-top span {
+  width: 1em;
+  height: 1em;
+  margin-top: 8px;
+  display: block;
+  border-left: 2px solid white;
+  border-top: 2px solid white;
+  transform: rotate(45deg);
+}
+
+
+/* ! Style navbar top start */
+
+/* * Brand icon (Text or Image) */
+
+/* ! comment this for text brand */
+nav a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ! uncomment this for image brand */
+/* nav a .brand {
+  display: block;/
+  width: 2.5em;
+  background-color: black;
+  border-radius: 50%;
+} */
+
+nav {
+  background-color: rgb(255, 255, 255);
+  position: fixed;
+  width: 100vw;
+  height: 3em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 1em;
+  z-index: 2;
+  top: 0%;
+}
+
+nav menu {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+nav menu a {
+  margin: 0px 1em;
+  text-decoration: none;
+  color: rgb(31, 31, 31);
+}
+nav menu a:hover {
+  color: rgb(126, 126, 126);
+}
+
+nav menu a:active {
+  color: rgb(174, 174, 174);
+}
+
+/* ! Setting display toggle element to none in width more than 768px */
+
+nav .toggle {
+  display: none;
+}
+
+/* ! Style navbar top end */
+
+/* ! Style header section start */
+
+section#welcome {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.02) 0%,
+    rgb(229, 249, 251) 85%,
+    rgba(0, 38, 255, 0.089) 100%,
+    rgba(0, 212, 255, 0.02) 100%
+  );
+}
+section#welcome header {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+section#welcome header .wrap-h1 {
+  align-self: center;
+}
+/* * Main header text */
+section#welcome header .wrap-h1 h1 {
+  font-size: 6vmax;
+  color: var(--primary-color);
+  cursor: pointer;
+  overflow-x: hidden;
+  white-space: nowrap;
+  width: 100%;
+  border-right: 2px solid red;
+  animation: typing 1600ms steps(22),
+    blink-cursor 550ms step-end infinite alternate;
+  transition: 500ms;
+}
+
+section#welcome header .wrap-h1:hover h1 {
+  transform: scale(110%) translateY(-10%);
+}
+/* ? Animation for header text (blink-cursor and typing animation)*/
+@keyframes typing {
+  from {
+    width: 0%;
+  }
+}
+
+@keyframes blink-cursor {
+  50% {
+    border-color: transparent;
+  }
+}
+
+section#welcome header p {
+  margin-top: 1em;
+  text-align: center;
+  font-size: 1.5rem;
+}
+section#welcome header .wrap-btn {
+  align-self: center;
+  display: flex;
+  justify-content: center;
+}
+section#welcome header .wrap-btn button {
+  border-radius: 5px;
+  border: none;
+  box-shadow: var(--box-shadows);
+  margin-top: 3em;
+  width: 16em;
+  height: 4em;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  background-color: var(--primary-color);
+  cursor: pointer;
+}
+
+section#welcome header .wrap-btn button:hover {
+  background-color: rgb(0, 0, 0);
+  color: rgb(226, 226, 226);
+}
+
+section#welcome header .wrap-btn button:active {
+  background-color: rgb(74, 75, 79);
+}
+/* ! Style header section end */
+
+/* ! Style feature section start */
+section#features {
+  background-image: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.02) 0%,
+    rgb(229, 249, 251) 55%,
+    rgba(0, 38, 255, 0.089) 100%,
+    rgba(0, 212, 255, 0.02) 100%
+  );
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+section#features h1 {
+  margin: 1em auto;
+  margin-top: 5em;
+  text-align: center;
+}
+
+section#features .row-card {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+section#features .row-card .card {
+  cursor: pointer;
+  width: 12em;
+  height: 22em;
+  margin: 1em 1em;
+  border-radius: 5px;
+  transition: 300ms;
+  background-color: rgb(248, 249, 250);
+  box-shadow: 0px 1px 5px rgba(113, 113, 113, 0.2);
+}
+section#features .row-card .card:hover {
+  transform: scale(105%);
+}
+
+section#features .row-card .card img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+section#features .row-card .card h2 {
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+section#features .row-card .card p {
+  margin-top: 3%;
+  font-size: 80%;
+  text-align: center;
+}
+/* ! Style feature section end */
+
+/* ! Style why section start */
+section#why {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 1em;
+  padding-top: 10em;
+  padding-bottom: 10em;
+}
+section#why {
+  text-align: center;
+}
+section#why h1 {
+  align-self: flex-start;
+  font-size: 2.3rem;
+}
+section#why h2 {
+  font-size: 1rem;
+  font-weight: normal;
+  align-self: flex-start;
+  margin-left: 10px;
+  margin-top: 6px;
+}
+section#why h3 {
+  font-size: 1.3rem;
+  margin-top: 2em;
+}
+section#why .row-why {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section#why .row-why .col-star p,
+section#why .row-why .col-people-count p {
+  font-size: 1.3rem;
+}
+section#why .row-why .col-progress {
+  margin-left: 0.6em;
+  order: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+section#why .row-why .col-star p {
+  margin: 0.2em 0em;
+}
+section#why .row-why .col-progress div {
+  width: 30vmax;
+  height: 1em;
+  margin: 0.4em 0em;
+  background-color: rgb(228, 228, 228);
+  border-radius: 3px;
+}
+section#why .row-why .col-progress div span {
+  height: 100%;
+  display: block;
+  border-radius: 3px;
+  background-color: rgb(21, 21, 201);
+}
+section#why .row-why .col-progress div:first-child span {
+  width: 83%;
+}
+section#why .row-why .col-progress div:nth-child(2) span {
+  width: 55%;
+}
+section#why .row-why .col-progress div:nth-child(3) span {
+  width: 2%;
+}
+section#why .row-why .col-progress div:nth-child(4) span {
+  width: 1%;
+}
+section#why .row-why .col-progress div:last-child span {
+  width: 1%;
+}
+
+section#why .row-why .col-people-count {
+  margin-left: 0.6em;
+  order: 1;
+}
+section#why .row-why .col-people-count p {
+  margin: 0.2em 0em;
+}
+/* ! Style why section end */
+
+/* ! Style docs section start */
+section#docs {
+  padding-top: 10em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  padding-left: 0.6em;
+  margin-bottom: 20em;
+}
+section#docs .row-docs h1 {
+  font-size: 2.5rem;
+}
+section#docs .row-docs p {
+  font-size: 1rem;
+  margin-left: 10px;
+  margin-top: 6px;
+}
+section#docs .row-docs button {
+  border: none;
+  box-shadow: var(--box-shadows);
+  color: white;
+  background-color: var(--primary-color);
+  margin-top: 1.5em;
+  cursor: pointer;
+  width: 10em;
+  height: 2.4em;
+  font-size: 1.2rem;
+  border-radius: 3px;
+}
+
+section#docs .row-docs button:hover {
+  background-color: black;
+}
+section#docs .row-docs button:active {
+  background-color: rgb(30, 38, 52);
+}
+
+section#docs img {
+  width: 50%;
+  transition: 300ms;
+}
+
+section#docs img:hover {
+  opacity: 60%;
+}
+
+/* ! Style docs section end */
+
+/* ! Style contact section start */
+section#contact {
+  background-color: rgb(255, 255, 255);
+  display: grid;
+  padding-top: 6em;
+  padding-bottom: 10em;
+  grid-template-columns: repeat(1, max-content);
+  justify-content: center;
+  align-content: center;
+}
+section#contact h1 {
+  margin: 1em auto;
+  text-align: center;
+  grid-column: 1 / -1;
+  font-size: 2rem;
+}
+section#contact form {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  gap: 1em;
+}
+
+section#contact form input {
+  width: 100%;
+  height: 2.5em;
+}
+
+section#contact form textarea, section#contact form input {
+  padding: 10px;
+}
+
+section#contact form label {
+  font-weight: 600;
+  font-size: small;
+}
+
+section#contact form button {
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  background-color: var(--primary-color);
+  color: azure;
+  font-weight: bold;
+  height: 2.5em;
+}
+
+section#contact form button:hover {
+  background-color: black;
+}
+
+/* ! Style contact section end */
+
+/* ! Style footer start */
+footer {
+  background-color: var(--primary-color);
+  color: azure;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+footer h2 {
+  text-align: center;
+}
+footer .row-footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 50vmax;
+  height: 15vmax;
+}
+footer .row-footer .col-footer1 a,
+footer .row-footer .col-footer2 a {
+  margin: 1em;
+  display: block;
+  text-decoration: none;
+  color: azure;
+}
+
+footer .row-footer .col-footer1 a:hover,
+footer .row-footer .col-footer2 a:hover {
+  color: rgb(137, 136, 136);
+}
+
+footer .row-footer .col-footer1 a:hover,
+footer .row-footer .col-footer2 a:active {
+  color: rgb(182, 181, 181);
+}
+/* ! Style footer end */
+
+/* ! Responsive breakpoint for Tablet  */
+@media screen and (max-width: 768px) {
+  section#welcome header p {
+    font-size: 1.3rem;
+  }
+  section #docs {
+    flex-wrap: wrap;
+  }
+
+  section#docs .row-docs h1 {
+    margin-top: 1em;
+  }
+  section#docs .row-docs button {
+    width: 7.5em;
+    height: 2.8em;
+  }
+}
+
+/* ! Responsive breakpoint for Mobile  */
+@media screen and (max-width: 576px) {
+  nav {
+    padding: 0em 1.3em;
+    height: 3em;
+  }
+  nav menu {
+    flex-direction: column;
+    position: fixed;
+    top: 3em;
+    left: 0%;
+    width: 100vw;
+    align-items: center;
+    background-color: white;
+    overflow-y: hidden;
+    bottom: 55em;
+    opacity: 0%;
+    justify-content: space-evenly;
+    transition: 600ms;
+    order: 3;
+    opacity: 0%;
+  }
+
+  /* * If menu contains class slide show menu items */
+
+  nav menu.slide {
+    bottom: 0%;
+    opacity: 100%;
+  }
+  nav a .brand {
+    /* ! uncomment this for text brand */
+    /* position: absolute;
+    top: 3px;
+    right: 0%;
+    left: 0%;
+    margin: 0% auto; */
+    /* ! comment this for image brand */
+    order: 2;
+    line-height: 2em;
+  }
+
+  /* ? Toggle hamburger icon */
+  nav .toggle {
+    order: 4;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 3;
+    background-color: inherit;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    padding: 5px 1em;
+    transition: 300ms;
+  }
+  nav .toggle:hover {
+    background-color: #ededed;
+  }
+  nav menu.slide ~ .toggle {
+    border: 2px solid var(--border-color);
+  }
+  nav .toggle span {
+    width: 25px;
+    border-radius: 3px;
+    height: 5px;
+    margin: 2px auto;
+    background-color: black;
+    transition: 300ms;
+  }
+  nav .toggle.change span:first-child {
+    transform: translateY(9px) rotate(45deg);
+  }
+  nav .toggle.change span:last-child {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+  nav .toggle.change span:nth-child(2) {
+    transform: scale(0px);
+    opacity: 0%;
+  }
+  section#welcome header p {
+    font-size: 15px;
+  }
+  section#features .row-card {
+    justify-content: center;
+  }
+  section#features .row-card .card {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  section#why {
+    padding-left: 0%;
+  }
+  section#why h1 {
+    align-self: center;
+    font-size: 1.8rem;
+  }
+  section#why h2 {
+    align-self: center;
+    font-size: 15px;
+  }
+
+  section#docs {
+    flex-direction: column;
+    justify-content: center;
+  }
+  section#docs .row-docs {
+    order: 1;
+  }
+  section#docs img {
+    width: 100%;
+  }
+  section#docs .row-docs h1 {
+    font-size: 1.8rem;
+  }
+  section#docs .row-docs p {
+    font-size: 15px;
+  }
+
+  section#contact h2 {
+    font-size: 1.6rem;
+  }
+}
+
+/* ! Responsive breakpoint for smartwatch */
+@media screen and (max-width: 300px) {
+  nav {
+    position: relative;
+  }
+  nav menu {
+    position: absolute;
+    height: 100vh;
+    transform: scale(0%);
+  }
+
+  nav menu.slide {
+    transform: scale(100%);
+  }
+  section#welcome header .wrap-h1 h1 {
+    font-size: 1.3rem;
+  }
+  section#welcome header p {
+    font-size: 13px;
+  }
+  section#welcome header .wrap-btn button {
+    width: 10em;
+    font-size: 10px;
+    height: 2.8em;
+  }
+  section#features .row-card .card {
+    width: 7em;
+    height: 13em;
+  }
+  section#features .row-card .card h2 {
+    font-size: 1em;
+  }
+  section#features .row-card .card p {
+    font-size: 12px;
+  }
+  section#why h1 {
+    font-size: 1.1rem;
+  }
+  section#why h2 {
+    font-size: 12px;
+  }
+  section#why .row-why .col-star p,
+  section#why .row-why .col-people-count p {
+    font-size: 13px;
+  }
+  section#why .row-why .col-people-count p {
+    margin: 1em auto;
+  }
+  section#why .row-why .col-star p {
+    margin: 1em auto;
+  }
+  section#docs .row-docs h1 {
+    font-size: 1.3rem;
+  }
+  section#docs .row-docs p {
+    font-size: 14px;
+  }
+  section#docs .row-docs button {
+    font-size: 10px;
+  }
+  section#contact h2 {
+    font-size: 1.3rem;
+  }
+  section#contact form textarea {
+    width: 80%;
+    height: 70vh;
+  }
+  section#contact form input:nth-child(2) {
+    width: 80%;
+  }
+  section#contact form input:nth-child(3) {
+    width: 50%;
+    font-size: 10px;
+  }
+  footer {
+    justify-content: space-around;
+    padding: 3px;
+  }
+  footer h2 {
+    font-size: 1rem;
+  }
+  footer .row-footer {
+    height: 10em;
+  }
+  footer .row-footer .col-footer1 a,
+  footer .row-footer .col-footer2 a {
+    margin: 18px 4px;
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Simple Landing Page Website" />
+    <title>Web - Landing pages</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="https://afif-id.web.app/icon.png" />
+  </head>
+  <body>
+    <nav>
+      <a href="https://afif-id.web.app">
+        <h1 class="brand">Afif</h1>
+      </a>
+      <menu>
+        <a href="#welcome">Get Started</a>
+        <a href="#features">Features</a>
+        <a href="#why">Why us this</a>
+        <a href="#docs">Docs</a>
+        <a href="#contact">Contact</a>
+      </menu>
+
+      <button class="toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+
+    <section id="welcome">
+      <header>
+        <div class="wrap-h1">
+          <h1>Hello Welcome</h1>
+        </div>
+        <p>| Let's Start from here to build modern web app</p>
+
+        <div class="wrap-btn">
+          <a href="#header">
+            <button>Try it now! &rArr;</button>
+          </a>
+        </div>
+      </header>
+    </section>
+
+    <section id="features">
+      <h1>Features</h1>
+      <div class="row-card">
+        <div class="card">
+          <img
+            loading="lazy"
+            src="https://source.unsplash.com/random/1000x1000/?computer"
+            alt="image example 1"
+            title="image example 1"
+          />
+          <h2>Canvas</h2>
+          <p>This is example text feature</p>
+        </div>
+        <div class="card">
+          <img
+            loading="lazy"
+            src="https://source.unsplash.com/random/1000x1000/?computer"
+            alt="image example 2"
+            title="image example 2"
+          />
+          <h2>Smooth scroll</h2>
+          <p>This is example text feature</p>
+        </div>
+        <div class="card">
+          <img
+            loading="lazy"
+            src="https://source.unsplash.com/random/1000x1000/?computer"
+            alt="image example 3"
+            title="image example 3"
+          />
+          <h2>Easy to Learn</h2>
+          <p>This is example text feature</p>
+        </div>
+        <div class="card">
+          <img
+            loading="lazy"
+            src="https://source.unsplash.com/random/1000x1000/?computer"
+            alt="image example 4"
+            title="image example 4"
+          />
+          <h2>Responsive</h2>
+          <p>This is example text feature</p>
+        </div>
+        <div class="card">
+          <img
+            loading="lazy"
+            src="https://source.unsplash.com/random/1000x1000/?computer"
+            alt="image example 5"
+            title="image example 5"
+          />
+          <h2>Up to date</h2>
+          <p>This is example text feature</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="why">
+      <h1>Why us this?</h1>
+      <h2>We have much 5 star from people</h2>
+      <h3>Rating</h3>
+      <div class="row-why">
+        <div class="col-star">
+          <p>5</p>
+          <p>4</p>
+          <p>3</p>
+          <p>2</p>
+          <p>1</p>
+        </div>
+        <div class="col-progress">
+          <div><span></span></div>
+          <div><span></span></div>
+          <div><span></span></div>
+          <div><span></span></div>
+          <div><span></span></div>
+        </div>
+        <div class="col-people-count">
+          <p>350</p>
+          <p>40</p>
+          <p>12</p>
+          <p>0</p>
+          <p>0</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="docs">
+      <div class="row-docs">
+        <h1>New to this?</h1>
+        <p>If you new to this, we have docs and you can learn more about this</p>
+        <button>Learn now!</button>
+      </div>
+      <img
+        loading="lazy"
+        src="https://source.unsplash.com/random/1920x1080/?computer"
+        alt="100 days of cloud banner"
+        title="100 days of cloud banner"
+      />
+    </section>
+
+    <section id="contact">
+      <h1>Let's Work together</h1>
+      <form action="mailto:afifurrohman.id@gmail.com" method="POST">
+        <label for="name">Name: </label>
+        <input type="text" id="name" required placeholder="Your Name">
+        <label for="message">Message: </label>
+        <textarea
+          id="message"
+          cols="50"
+          rows="15"
+          required
+          placeholder="type here..."
+        ></textarea>
+        <label for="email">Email: </label>
+        <input
+          type="email"
+          id="email"
+          required
+          placeholder="email@example.com"
+        />
+        <button type="submit">Send</button>
+      </form>
+    </section>
+
+    <footer>
+      <h2>Afif</h2>
+      <div class="row-footer">
+        <div class="col-footer1">
+          <a href="#">Faq</a>
+          <a href="#">About</a>
+          <a href="#">Api</a>
+        </div>
+        <div class="col-footer2">
+          <a href="#">Premium member</a>
+          <a href="#">Partner</a>
+          <a href="#">Community</a>
+        </div>
+      </div>
+    </footer>
+
+    <button class="go-top"><span></span></button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
