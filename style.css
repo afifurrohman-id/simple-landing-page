@@ -16,8 +16,8 @@
 /* ! Go to top button */
 .go-top {
   cursor: pointer;
-  width: 3em;
-  height: 3em;
+  width: 3.5em;
+  height: 3.5em;
   right: 2em;
   bottom: 2em;
   background-color: rgb(10, 90, 237);
@@ -37,7 +37,6 @@
   border-top: 2px solid white;
   transform: rotate(45deg);
 }
-
 
 /* ! Style navbar top start */
 
@@ -403,7 +402,8 @@ section#contact form input {
   height: 2.5em;
 }
 
-section#contact form textarea, section#contact form input {
+section#contact form textarea,
+section#contact form input {
   padding: 10px;
 }
 
@@ -601,14 +601,19 @@ footer .row-footer .col-footer2 a:active {
   section#docs .row-docs p {
     font-size: 15px;
   }
-
-  section#contact h2 {
-    font-size: 1.6rem;
+  section#contact {
+    grid-template-columns: repeat(1, 80vw);
   }
 }
 
 /* ! Responsive breakpoint for smartwatch */
 @media screen and (max-width: 300px) {
+  .go-top {
+    width: 2.3em;
+    height: 2.3em;
+    right: 13px;
+    bottom: 13px;
+  }
   nav {
     position: relative;
   }
@@ -667,20 +672,7 @@ footer .row-footer .col-footer2 a:active {
   section#docs .row-docs button {
     font-size: 10px;
   }
-  section#contact h2 {
-    font-size: 1.3rem;
-  }
-  section#contact form textarea {
-    width: 80%;
-    height: 70vh;
-  }
-  section#contact form input:nth-child(2) {
-    width: 80%;
-  }
-  section#contact form input:nth-child(3) {
-    width: 50%;
-    font-size: 10px;
-  }
+
   footer {
     justify-content: space-around;
     padding: 3px;
