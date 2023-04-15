@@ -499,10 +499,10 @@ footer .row-footer .col-footer2 a:active {
     align-items: center;
     background-color: white;
     overflow-y: hidden;
-    bottom: 55em;
+    bottom: 185em;
     opacity: 0%;
     justify-content: space-evenly;
-    transition: 600ms;
+    transition: 400ms;
     order: 3;
     opacity: 0%;
   }
