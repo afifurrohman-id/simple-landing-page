@@ -103,7 +103,7 @@ section#welcome {
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  height: 100vh;
+  padding: 15em 0px;
   background-image: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0.02) 0%,
@@ -445,7 +445,7 @@ footer .row-footer {
   justify-content: space-evenly;
   align-items: center;
   width: 50vmax;
-  height: 15vmax;
+  height: 10em;
 }
 footer .row-footer .col-footer1 a,
 footer .row-footer .col-footer2 a {
@@ -502,7 +502,7 @@ footer .row-footer .col-footer2 a:active {
     bottom: 185em;
     opacity: 0%;
     justify-content: space-evenly;
-    transition: 400ms;
+    transition: 300ms;
     order: 3;
     opacity: 0%;
   }
@@ -619,7 +619,8 @@ footer .row-footer .col-footer2 a:active {
   }
   nav menu {
     position: absolute;
-    height: 100vh;
+    height: max-content;
+    gap:1em;
     transform: scale(0%);
   }
 

@@ -1,14 +1,14 @@
-function toggleHamburger() {
+function handleToggleMenu() {
   const toggle = document.querySelector("nav .toggle");
   const menu = document.querySelector("nav menu");
-  const itemMenu = document.querySelectorAll("menu a");
+  const linkMenu = document.querySelectorAll("nav menu a");
 
   toggle.addEventListener("click", () => {
     toggle.classList.toggle("change");
     menu.classList.toggle("slide");
   });
-  itemMenu.forEach((item) => {
-    item.addEventListener("click", () => {
+  linkMenu.forEach(link => {
+    link.addEventListener("click", () => {
       menu.classList.remove("slide");
       toggle.classList.remove("change");
     });
@@ -21,10 +21,10 @@ window.onscroll = () => {
     buttonToTop.style.display = "flex";
     buttonToTop.addEventListener("click", () => {
       window.scrollTo({ top: 0 });
-    }) 
+    });
   } else {
     buttonToTop.style.display = "none";
   }
-}
-  
-document.querySelector("nav") && toggleHamburger();
+};
+
+document.querySelector("nav") && handleToggleMenu();
