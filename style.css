@@ -28,6 +28,13 @@
   justify-content: center;
   align-items: center;
 }
+.go-top:is(:hover) {
+  opacity: 75%;
+}
+.go-top:is(:active) {
+  opacity: 100%;
+}
+
 .go-top span {
   width: 1em;
   height: 1em;

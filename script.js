@@ -15,16 +15,14 @@ function handleToggleMenu() {
   });
 }
 
-window.onscroll = () => {
+window.addEventListener('scroll', () => {
   const buttonToTop = document.querySelector(".go-top");
   if (window.scrollY >= 50) {
     buttonToTop.style.display = "flex";
     buttonToTop.addEventListener("click", () => {
       window.scrollTo({ top: 0 });
     });
-  } else {
-    buttonToTop.style.display = "none";
-  }
-};
+  } else buttonToTop.style.display = "none";
+})
 
 document.querySelector("nav") && handleToggleMenu();
