@@ -28,10 +28,10 @@
   justify-content: center;
   align-items: center;
 }
-.go-top:is(:hover) {
+.go-top:hover {
   opacity: 75%;
 }
-.go-top:is(:active) {
+.go-top:active {
   opacity: 100%;
 }
 
