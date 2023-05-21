@@ -29,10 +29,10 @@
   align-items: center;
 }
 .go-top:hover {
-  opacity: 75%;
+  filter: brightness(70%);
 }
 .go-top:active {
-  opacity: 100%;
+  filter: brightness(100%);
 }
 
 .go-top span {
@@ -119,16 +119,16 @@ section#welcome {
     rgba(0, 212, 255, 0.02) 100%
   );
 }
-section#welcome header {
+section#welcome {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
 }
-section#welcome header .wrap-h1 {
+section#welcome .wrap-h1 {
   align-self: center;
 }
 /* * Main header text */
-section#welcome header .wrap-h1 h1 {
+section#welcome .wrap-h1 h1 {
   font-size: 6vmax;
   color: var(--primary-color);
   cursor: pointer;
@@ -141,7 +141,7 @@ section#welcome header .wrap-h1 h1 {
   transition: 500ms;
 }
 
-section#welcome header .wrap-h1:hover h1 {
+section#welcome .wrap-h1:hover h1 {
   transform: scale(110%) translateY(-10%);
 }
 /* ? Animation for header text (blink-cursor and typing animation)*/
@@ -157,17 +157,17 @@ section#welcome header .wrap-h1:hover h1 {
   }
 }
 
-section#welcome header p {
+section#welcome p {
   margin-top: 1em;
   text-align: center;
   font-size: 1.5rem;
 }
-section#welcome header .wrap-btn {
+section#welcome .wrap-btn {
   align-self: center;
   display: flex;
   justify-content: center;
 }
-section#welcome header .wrap-btn button {
+section#welcome .wrap-btn button {
   border-radius: 5px;
   border: none;
   box-shadow: var(--box-shadows);
@@ -180,12 +180,12 @@ section#welcome header .wrap-btn button {
   cursor: pointer;
 }
 
-section#welcome header .wrap-btn button:hover {
+section#welcome .wrap-btn button:hover {
   background-color: rgb(0, 0, 0);
   color: rgb(226, 226, 226);
 }
 
-section#welcome header .wrap-btn button:active {
+section#welcome .wrap-btn button:active {
   background-color: rgb(74, 75, 79);
 }
 /* ! Style header section end */
@@ -475,7 +475,7 @@ footer .row-footer .col-footer2 a:active {
 
 /* ! Responsive breakpoint for Tablet  */
 @media screen and (max-width: 768px) {
-  section#welcome header p {
+  section#welcome p {
     font-size: 1.3rem;
   }
   section #docs {
@@ -560,17 +560,17 @@ footer .row-footer .col-footer2 a:active {
     background-color: black;
     transition: 300ms;
   }
-  nav .toggle.change span:first-child {
+  nav .slide ~ .toggle span:first-child {
     transform: translateY(9px) rotate(45deg);
   }
-  nav .toggle.change span:last-child {
+  nav .slide ~ .toggle span:last-child {
     transform: translateY(-9px) rotate(-45deg);
   }
-  nav .toggle.change span:nth-child(2) {
+  nav .slide ~ .toggle span:nth-child(2) {
     transform: scale(0px);
     opacity: 0%;
   }
-  section#welcome header p {
+  section#welcome p {
     font-size: 15px;
   }
   section#features .row-card {
@@ -634,13 +634,13 @@ footer .row-footer .col-footer2 a:active {
   nav menu.slide {
     transform: scale(100%);
   }
-  section#welcome header .wrap-h1 h1 {
+  section#welcome .wrap-h1 h1 {
     font-size: 1.3rem;
   }
-  section#welcome header p {
+  section#welcome p {
     font-size: 13px;
   }
-  section#welcome header .wrap-btn button {
+  section#welcome .wrap-btn button {
     width: 10em;
     font-size: 10px;
     height: 2.8em;

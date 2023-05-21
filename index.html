@@ -7,9 +7,11 @@
     <meta name="description" content="Simple Landing Page Website for company" />
     <title>Web - Landing pages</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="https://afif-id.web.app/assets/icons/icon.png" />
+    <script src="script.js" defer></script>
+    <link rel="shortcut icon" href="https://firebasestorage.googleapis.com/v0/b/afif-id.appspot.com/o/assets-projects%2Ficons%2Ficon.png?alt=media&token=54f7ba93-04f3-4e8c-aef4-db4b3c0456c4" />
   </head>
   <body>
+    <header>
     <nav>
       <a href="https://afif-id.web.app">
         <h1 class="brand">Afif</h1>
@@ -30,7 +32,6 @@
     </nav>
 
     <section id="welcome">
-      <header>
         <div class="wrap-h1">
           <h1>Hello Welcome</h1>
         </div>
@@ -41,8 +42,8 @@
             <button>Try it now! &rArr;</button>
           </a>
         </div>
-      </header>
-    </section>
+      </section>
+    </header>
 
     <section id="features">
       <h1>Features</h1>
@@ -145,22 +146,22 @@
 
     <section id="contact">
       <h1>Let's Work together</h1>
-      <form action="mailto:afifurrohman.id@gmail.com" method="POST">
+      <form action="mailto:afifurrohman.id@gmail.com" method="post" required autocomplete="off">
         <label for="name">Name: </label>
-        <input type="text" id="name" required placeholder="Your Name">
+        <input type="text" id="name" placeholder="Your Name">
         <label for="message">Message: </label>
         <textarea
           id="message"
           cols="50"
           rows="15"
-          required
+        
           placeholder="type here..."
         ></textarea>
         <label for="email">Email: </label>
         <input
           type="email"
           id="email"
-          required
+        
           placeholder="email@example.com"
         />
         <button type="submit">Send</button>
@@ -185,6 +186,5 @@
 
     <button title="button go to top" class="go-top"><span></span></button>
 
-    <script src="script.js"></script>
   </body>
 </html>
